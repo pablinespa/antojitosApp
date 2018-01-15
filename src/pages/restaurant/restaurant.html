@@ -1,0 +1,33 @@
+<!--
+  Generated template for the RestaurantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Restaurants</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item  *ngFor="let item of restaurants">
+
+    <ion-avatar item-start>
+      <img  src="./assets/imgs/default.jpg"  (load)="loaded = false" [hidden]="loaded">
+    </ion-avatar>
+    <h2>{{ item.name}}</h2>
+    <p>{{ item.address}} <br> coordinates: <small>{{ item.latitude }}, {{ item.longitude}}</small></p>
+
+    </button>  
+    <!--
+    <contact-row  *ngFor="let item of listContacts" (click)="goToContactInfo(item)">
+    
+    </contact-row>  
+    -->
+  </ion-list>
+</ion-content>

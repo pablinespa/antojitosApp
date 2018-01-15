@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LocationPage } from '../location/location';
+
+import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+
+declare var google;
 
 @Component({
   selector: 'page-home',
@@ -7,8 +12,13 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  map: any;
 
+  constructor(public navCtrl: NavController,
+    private geolocation: Geolocation) {
+    
   }
+
+  
 
 }
